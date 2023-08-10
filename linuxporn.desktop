@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=LinuxPorn
+Exec=linuxporn %F
+GenericName=Theme Store
+GenericName[zh_CN]=主题商店
+Comment=Download copyleft fonts, icons, themes and wallpapers
+Comment[zh_CN]=下载自由版权的字体，图标，主题和壁纸
+Type=Application
+Icon=linuxporn
+Categories=GTK;GNOME;XFCE;Qt;KDE;System;DesktopSettings;
+StartupNotify=true
