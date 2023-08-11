@@ -39,13 +39,12 @@ ApplicationWindow {
         height: parent.height - menubar.height
         y: menubar.height
 
-        Label {
-            text: "Content goes here!"
-            anchors.centerIn: parent
+        ListView {
+
         }
     }
 
-    Button {
+    StackView {
         text: "Push Me"
         anchors.centerIn: parent
     }
