@@ -37,6 +37,10 @@ Item {
             icon.name: 'internet-web-browser'
             text: 'linuxporn.guoyunhe.me'
             flat: true
+
+            onClicked: {
+                Qt.openUrlExternally('https://linuxporn.guoyunhe.me/')
+            }
         }
     }
 }
