@@ -7,29 +7,6 @@ ApplicationWindow {
     height: 480
     visible: true
 
-    menuBar: MenuBar {
-        id: menubar
-        Menu {
-            title: qsTr("&File")
-            Action { text: qsTr("&New...") }
-            Action { text: qsTr("&Open...") }
-            Action { text: qsTr("&Save") }
-            Action { text: qsTr("Save &As...") }
-            MenuSeparator { }
-            Action { text: qsTr("&Quit") }
-        }
-        Menu {
-            title: qsTr("&Edit")
-            Action { text: qsTr("Cu&t") }
-            Action { text: qsTr("&Copy") }
-            Action { text: qsTr("&Paste") }
-        }
-        Menu {
-            title: qsTr("&Help")
-            Action { text: qsTr("&About") }
-        }
-    }
-
     Drawer {
         id: drawer
         modal: false
@@ -37,8 +14,7 @@ ApplicationWindow {
         visible: true
         position: 1 // keep open
         width: 200
-        height: parent.height - menubar.height
-        y: menubar.height
+        height: parent.height
 
         ListModel {
             id: listModel
