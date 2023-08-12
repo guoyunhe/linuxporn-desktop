@@ -9,14 +9,12 @@ from PySide6.QtQml import QQmlApplicationEngine
 
 
 if __name__ == "__main__":
-    QGuiApplication.setApplicationName("Gallery")
-    QGuiApplication.setOrganizationName("QtProject")
+    QGuiApplication.setApplicationName("LinuxPorn")
+    QGuiApplication.setOrganizationName("GuoYunhe")
 
     app = QGuiApplication()
-    QIcon.setThemeName("gallery")
 
-    engine = QQmlApplicationEngine()
-    engine.load(QUrl.fromLocalFile("qt6/qml/app.qml"))
+    engine = QQmlApplicationEngine("qt6/qml/app.qml")
     rootObjects = engine.rootObjects()
 
     # quit on view error
