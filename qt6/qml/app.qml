@@ -75,8 +75,10 @@ ApplicationWindow {
                 icon.name: moduleIcon
 
                 onClicked: {
-                    listView.currentIndex = index
-                    stackView.push(moduleView)
+                    if (listView.currentIndex !== index) {
+                        listView.currentIndex = index
+                        stackView.push(moduleView)
+                    }
                 }
             }
         }
@@ -86,5 +88,6 @@ ApplicationWindow {
         id: stackView
         anchors.fill: parent
         anchors.leftMargin: drawer.width
+        initialItem: "./fonts.qml"
     }
 }
