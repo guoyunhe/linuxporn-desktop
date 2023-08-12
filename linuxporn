@@ -3,7 +3,7 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 if [ $DESKTOP_SESSION = "plasmawayland" ]; then
-    python3 $SCRIPT_DIR/qt6/app.py
+    python3 $SCRIPT_DIR/linuxporn-qt6.py
 else
     python3 $SCRIPT_DIR/gtk4/app.py
 fi

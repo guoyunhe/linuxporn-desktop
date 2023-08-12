@@ -3,18 +3,20 @@
 import signal
 import sys
 
-from PySide6.QtGui import QGuiApplication, QIcon
-from PySide6.QtCore import QUrl
+from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 
+from core import meta
 
+# Thread example
+# https://doc.qt.io/qtforpython-6/examples/example_widgets_thread_signals.html
 if __name__ == "__main__":
-    QGuiApplication.setApplicationName("LinuxPorn")
+    QGuiApplication.setApplicationName(meta.APP_NAME)
     QGuiApplication.setOrganizationName("GuoYunhe")
 
     app = QGuiApplication()
 
-    engine = QQmlApplicationEngine("qt6/qml/app.qml")
+    engine = QQmlApplicationEngine("qt6/app.qml")
     rootObjects = engine.rootObjects()
 
     # quit on view error

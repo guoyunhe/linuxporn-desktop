@@ -21,22 +21,27 @@ ApplicationWindow {
             ListElement {
                 moduleName: "Fonts"
                 moduleIcon: "preferences-desktop-font"
-                moduleView: "./fonts.qml"
+                moduleView: "./fonts/fonts.qml"
             }
             ListElement {
                 moduleName: "Colors"
                 moduleIcon: "preferences-desktop-color"
-                moduleView: "./colors.qml"
+                moduleView: "./colors/colors.qml"
             }
             ListElement {
                 moduleName: "Wallpaper"
                 moduleIcon: "preferences-desktop-wallpaper"
-                moduleView: "./wallpaper.qml"
+                moduleView: "./wallpaper/wallpaper.qml"
             }
             ListElement {
                 moduleName: "Settings"
                 moduleIcon: "preferences"
-                moduleView: "./settings.qml"
+                moduleView: "./settings/settings.qml"
+            }
+            ListElement {
+                moduleName: "About"
+                moduleIcon: "help-about"
+                moduleView: "./about/about.qml"
             }
         }
 
@@ -64,6 +69,6 @@ ApplicationWindow {
         id: stackView
         anchors.fill: parent
         anchors.leftMargin: drawer.width
-        initialItem: "./fonts.qml"
+        initialItem: "./fonts/fonts.qml"
     }
 }
