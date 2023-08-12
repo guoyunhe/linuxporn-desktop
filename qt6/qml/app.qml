@@ -53,6 +53,11 @@ ApplicationWindow {
                 moduleView: "./colors.qml"
             }
             ListElement {
+                moduleName: "Wallpaper"
+                moduleIcon: "preferences-desktop-wallpaper"
+                moduleView: "./wallpaper.qml"
+            }
+            ListElement {
                 moduleName: "Settings"
                 moduleIcon: "preferences"
                 moduleView: "./settings.qml"
