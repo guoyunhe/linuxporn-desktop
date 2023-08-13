@@ -2,7 +2,8 @@ import QtQuick
 import QtQuick.Controls
 
 ApplicationWindow {
-    title: "LinuxPorn"
+    id: window
+    title: 'Fonts'
     width: 640
     height: 480
     visible: true
@@ -19,29 +20,29 @@ ApplicationWindow {
         ListModel {
             id: listModel
             ListElement {
-                moduleName: "Fonts"
-                moduleIcon: "preferences-desktop-font"
-                moduleView: "./fonts/fonts.qml"
+                moduleName: 'Fonts'
+                moduleIcon: 'preferences-desktop-font'
+                moduleView: './fonts/fonts.qml'
             }
             ListElement {
-                moduleName: "Colors"
-                moduleIcon: "preferences-desktop-color"
-                moduleView: "./colors/colors.qml"
+                moduleName: 'Colors'
+                moduleIcon: 'preferences-desktop-color'
+                moduleView: './colors/colors.qml'
             }
             ListElement {
-                moduleName: "Wallpaper"
-                moduleIcon: "preferences-desktop-wallpaper"
-                moduleView: "./wallpaper/wallpaper.qml"
+                moduleName: 'Wallpaper'
+                moduleIcon: 'preferences-desktop-wallpaper'
+                moduleView: './wallpaper/wallpaper.qml'
             }
             ListElement {
-                moduleName: "Settings"
-                moduleIcon: "preferences"
-                moduleView: "./settings/settings.qml"
+                moduleName: 'Settings'
+                moduleIcon: 'preferences'
+                moduleView: './settings/settings.qml'
             }
             ListElement {
-                moduleName: "About"
-                moduleIcon: "help-about"
-                moduleView: "./about/about.qml"
+                moduleName: 'About'
+                moduleIcon: 'help-about'
+                moduleView: './about/about.qml'
             }
         }
 
@@ -59,6 +60,7 @@ ApplicationWindow {
                     if (listView.currentIndex !== index) {
                         listView.currentIndex = index
                         stackView.push(moduleView)
+                        window.title = moduleName
                     }
                 }
             }
@@ -69,6 +71,6 @@ ApplicationWindow {
         id: stackView
         anchors.fill: parent
         anchors.leftMargin: drawer.width
-        initialItem: "./fonts/fonts.qml"
+        initialItem: './fonts/fonts.qml'
     }
 }

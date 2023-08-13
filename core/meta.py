@@ -1,2 +1,4 @@
 APP_NAME = 'LinuxPorn'
-ORG_NAME = 'GuoYunhe'
+APP_DISPLAY_NAME = 'Linux Porn'
+APP_VERSION = '1.0.0'
+ORG_NAME = 'Guo Yunhe'

@@ -10,13 +10,17 @@ from core import meta
 
 # Thread example
 # https://doc.qt.io/qtforpython-6/examples/example_widgets_thread_signals.html
-if __name__ == "__main__":
+if __name__ == '__main__':
     QGuiApplication.setApplicationName(meta.APP_NAME)
-    QGuiApplication.setOrganizationName("GuoYunhe")
+    QGuiApplication.setApplicationDisplayName(meta.APP_DISPLAY_NAME)
+    QGuiApplication.setApplicationVersion(meta.APP_VERSION)
+    QGuiApplication.setOrganizationName(meta.ORG_NAME)
 
     app = QGuiApplication()
 
-    engine = QQmlApplicationEngine("qt6/app.qml")
+    engine = QQmlApplicationEngine()
+    engine.rootContext().setContextProperty('fonts', "what")
+    engine.load('qt6/app.qml')
     rootObjects = engine.rootObjects()
 
     # quit on view error

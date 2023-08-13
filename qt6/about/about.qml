@@ -19,12 +19,12 @@ Item {
 
         Label {
             Layout.alignment: Qt.AlignCenter
-            text: 'LinuxPorn'
+            text: `${Application.displayName} (${Application.version})`
         }
 
         Label {
             Layout.alignment: Qt.AlignCenter
-            text: '© 2023 Guo Yunhe'
+            text: `By Guo Yunhe`
         }
 
         Label {

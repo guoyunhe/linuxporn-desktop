@@ -4,5 +4,5 @@ import QtQuick.Layouts
 import QtQuick.Controls
 
 Label {
-    text: "Fonts"
+    text: "Fonts" + fonts
 }
