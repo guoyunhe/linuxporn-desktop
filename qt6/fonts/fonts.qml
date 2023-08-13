@@ -3,6 +3,14 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
-Label {
-    text: "Fonts" + fonts
+ScrollView {
+    ListView {
+        anchors.fill: parent
+        model: fontListModel
+
+        delegate: ItemDelegate {
+            width: parent.width
+            text: fontFamily
+        }
+    }
 }

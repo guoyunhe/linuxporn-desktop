@@ -7,6 +7,7 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 
 from core import meta
+from qt6.fonts.fontlistmodel import FontListModel
 
 # Thread example
 # https://doc.qt.io/qtforpython-6/examples/example_widgets_thread_signals.html
@@ -19,7 +20,8 @@ if __name__ == '__main__':
     app = QGuiApplication()
 
     engine = QQmlApplicationEngine()
-    engine.rootContext().setContextProperty('fonts', "what")
+    fontListModel = FontListModel()
+    engine.rootContext().setContextProperty('fontListModel', fontListModel)
     engine.load('qt6/app.qml')
     rootObjects = engine.rootObjects()
 
