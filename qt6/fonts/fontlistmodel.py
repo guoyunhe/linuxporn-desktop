@@ -1,10 +1,78 @@
+import asyncio
+from aiohttp import ClientSession
+
 from PySide6.QtCore import Qt, QAbstractListModel, QByteArray, QObject, QThread, Signal, Slot
 
 
 class FontListModel(QAbstractListModel):
-    __data = [{
-        'fontFamily': 'Noto Sans',
-    }]
+    __data = [
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+        {
+            'fontFamily': 'Noto Sans',
+        },
+        {
+            'fontFamily': 'Noto Sans CJK',
+        },
+    ]
 
     def __init__(self, parent=None):
         super().__init__(parent)
